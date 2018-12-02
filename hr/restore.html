@@ -1,95 +1,106 @@
-
 <!doctype html>
-<html>
+<html lang="ua">
   <head>
     <meta charset="utf-8">
-    <title>VVoda</title>
+    <title>mrf_bootstrap_custom</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/vendors.min.css">
-    <link rel="stylesheet" media="all" href="css/app.css">
-    
-  </head>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-custom.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/fontawesome-custom.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" /> </head>
   <body>
-    <!-- <div class="visuallyhidden"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="fb" viewBox="0 0 24 24"><path fill="currentColor" d="M0 0v24h24v-24h-24zm16 7h-1.923c-.616 0-1.077.252-1.077.889v1.111h3l-.239 3h-2.761v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></symbol><symbol id="in" viewBox="0 0 24 24"><path fill="currentColor" d="M18.667 5.823v1.687c0 .271-.222.49-.497.49h-1.674c-.274 0-.496-.219-.496-.49v-1.687c0-.271.222-.49.496-.49h1.674c.275 0 .497.219.497.49zm5.333-5.823v24h-24v-24h24zm-4 10h-4.518c.362.609.581 1.313.581 2.073 0 2.249-1.824 4.073-4.073 4.073-2.25 0-4.073-1.824-4.073-4.073 0-.76.219-1.464.581-2.073h-4.498v6.852c0 1.738 1.451 3.148 3.19 3.148h9.662c1.738 0 3.148-1.41 3.148-3.148v-6.852zm-8.01 5.21c1.73 0 3.137-1.408 3.137-3.138 0-.939-.416-1.783-1.071-2.358-.23-.202-.49-.371-.772-.499-.395-.18-.833-.28-1.294-.28-.462 0-.899.101-1.294.28-.282.128-.542.297-.771.499-.656.575-1.072 1.419-1.072 2.358-.001 1.731 1.407 3.138 3.137 3.138zm8.01-8.062c0-1.738-1.41-3.148-3.148-3.148h-8.185v3.333h-.667v-3.333h-.667v3.333h-.666v-3.282c-.231.038-.455.095-.667.18v3.103h-.667v-2.735c-.801.571-1.333 1.497-1.333 2.549v2.186h4.982c.778-.855 1.866-1.334 3.008-1.334 1.148 0 2.233.483 3.007 1.333h5.003v-2.185zm-8 7.244c1.281 0 2.319-1.038 2.319-2.319s-1.038-2.319-2.319-2.319-2.319 1.038-2.319 2.319 1.038 2.319 2.319 2.319z"/></symbol><symbol id="tw" viewBox="0 0 24 24"><path fill="currentColor" d="M0 0v24h24v-24h-24zm18.862 9.237c.208 4.617-3.235 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.079-4.03 3.198-4.03.944 0 1.797.398 2.396 1.037.748-.147 1.451-.42 2.085-.796-.245.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.44.656-.997 1.234-1.638 1.697z"/></symbol></svg></div> -->
-
-    <!-- START .section.topbar -->
-    
-    <div class="section topbar topbar--fixed">
-    
-      <div class="section__inner">
-
-        <nav class="topbar__nav">
-          <button class="hamburger" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-          <ul>
-            
-            
-            <li><a class="text--secondary" href="index.html"><strong>Акція</strong></a></li>
-            
-            
-            
-            <li><a href="#">Про воду</a></li>
-            
-            
-            
-            <li><a href="#">Продукція</a></li>
-            
-            
-            
-            <li><a href="#">Ціни</a></li>
-            
-            
-            
-            <li><a href="#">Партнерам</a></li>
-            
-            
-            
-            <li><a href="#">Контакти</a></li>
-            
-            
-          </ul>
-        </nav>
-      </div>
+    <div class="visuallyhidden">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-filters_01" viewBox="0 0 512 512">
+          <path d="M504 152h-72V80a8 8 0 0 0-8-8h-64V8a8 8 0 0 0-8-8H8a8 8 0 0 0-8 8v344a8 8 0 0 0 8 8h64v64a8 8 0 0 0 8 8h72v72a8 8 0 0 0 8 8h344a8 8 0 0 0 8-8V160a8 8 0 0 0-8-8zM72 80v264H16V16h328v56H80a8 8 0 0 0-8 8zm80 80v256H88V88h328v64H160a8 8 0 0 0-8 8zm344 336H168V168h328v328z"
+          />
+          <path d="M472 440a8 8 0 0 0-8 8v16h-16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8zm-56 24h-16a8 8 0 0 0 0 16h16a8 8 0 0 0 0-16z" /> </symbol>
+        <symbol id="icon-filters_02" viewBox="0 0 490 490">
+          <path d="M245 0C156.5 0 84.4 72 84.4 160.5c0 85 146 315.1 152.2 324.9a10 10 0 0 0 16.8 0c6.2-9.8 152.2-239.9 152.2-325C405.6 72 333.6 0 245 0zm0 461.1c-13.2-21.3-40-65.6-66.5-114.6-48.5-89.4-74-153.7-74-186a140.7 140.7 0 0 1 281 0c0 32.3-25.5 96.6-74 186-26.5 49-53.3 93.3-66.5 114.6z"
+          />
+          <path d="M245 76a75 75 0 0 0-76 74c0 40.7 34.1 73.9 76 73.9s76-33.2 76-74a75 75 0 0 0-76-73.8zm0 127.9a55 55 0 0 1-56-54c0-29.7 25.1-53.8 56-53.8s56 24.1 56 53.9a55 55 0 0 1-56 53.9z" /> </symbol>
+        <symbol id="icon-filters_03" viewBox="0 0 478.2 478.2">
+          <path d="M239.1 0C107.1 0 0 107.1 0 239.1s107.1 239.1 239.1 239.1 239.1-107.1 239.1-239.1S371 0 239.1 0zm0 19.1c76.5 0 145.4 40.2 183.601 99.4-45.9-5.7-124.3-3.8-179.8 9.6H235.3c-55.5-13.4-133.9-15.3-179.8-9.6 38.2-59.2 107.1-99.4 183.6-99.4zm0 439.9c-122.4 0-219.9-97.5-219.9-219.9 0-34.399 7.7-66.899 21-95.6 9.6 3.8 13.4 11.5 13.4 11.5s3.8 7.6 11.5 36.3C72.7 220 90 223.8 90 223.8s22.9 5.7 47.8 5.7 40.2-1.9 57.4-7.6c17.2-7.6 23-28.7 23-28.7s7.6-17.2 13.399-34.4c0-1.9 3.801-3.8 5.7-5.7 1.9 1.9 5.7 1.9 5.7 5.7 5.7 17.2 13.4 34.4 13.4 34.4s7.6 21 23 28.7c17.199 7.6 32.5 7.6 57.399 7.6 24.9 0 47.8-5.7 47.8-5.7s17.2-3.8 24.9-32.5c7.7-28.7 9.6-36.3 9.6-36.3s3.801-7.6 13.4-11.5c13.4 28.7 21 61.2 21 95.6C459 361.5 361.5 459 239.1 459zm0-114.8c67 0 105.2-38.2 105.2-38.2v19.1s-38.2 38.2-105.2 38.2-105.2-38.2-105.2-38.2V306s38.2 38.2 105.2 38.2z"
+          /> </symbol>
+      </svg>
     </div>
-    <!-- END .section.topbar -->
-
+    <!-- start .navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg col">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Гардова роса</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link text-danger" href="#">Акція
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Про воду</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Про проект</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ціни</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Партнерам</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакти</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cabinet.html">Кабінет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end .navbar -->
     <!-- BEGIN content -->
-      
-
-<section class="section forms"> <!-- start .section.forms -->
-	<div class="section__inner">
-		<header class="section__header align-center forms__left">
-			<h2 class="section__title">Відновлення пароля</h2>
-		</header>
-		<div class="forms__right"> <!-- start .forms__right -->
-			<form action="" class="form form--login">
-				<label for="login_email" class="form__label">
-					<span>E-mail:</span>
-					<input type="email" id="login_email" class="form__input" placeholder="ваш e-mail" required>
-				</label>
-				<small class="form__hint">E-mail який ви вказували при реєстрації</small>
-				<div class="form__footer">
-					<a class="form__link" href="login.html">Згадали пароль?</a>
-					<input type="submit" class="form__submit" value="Відновити">
-				</div>
-			</form>
-		</div> <!-- end .forms__right -->
-	</div>
-</section> <!-- end .section.forms -->
-
-
+    <!-- start .hero -->
+    <main role="main" class="hero hero--login">
+      <div class="hero-container container">
+        <div class="hero-container--left">
+          <!-- start .hero-container--left -->
+          <h1 class="hero-heading">Відновлення пароля</h1>
+        </div>
+        <!-- end .hero-container--left -->
+        <div class="hero-container--right">
+          <!-- start .hero-container--right -->
+          <div class="hero__form">
+            <form>
+              <div class="form-group flex-wrap">
+                <label class="form-label" for="loginEmail">E-mail</label>
+                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="ваш e-mail">
+                <small class="form-text text-muted">E-mail який ви вказували при реєстрації</small>
+              </div>
+              <div class="form-footer">
+                <a href="login.html">Згадали пароль?</a>
+                <button type="submit" class="btn btn-primary">Відновити</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- end .hero-container--right -->
+      </div>
+    </main>
+    <!-- end .hero -->
     <!-- END content -->
-
+    <footer class="main-footer">
+      <div class="container"> Гардова роса&copy2018 </div>
+    </footer>
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/vendors.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
     <!-- END scripts -->
-
   </body>
 </html>
