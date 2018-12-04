@@ -94,6 +94,7 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: 'Fira Sans', sans-serif;
@@ -144,6 +145,7 @@ figcaption {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1030;
 }
 
 .navbar-brand {
@@ -397,6 +399,7 @@ figcaption {
 }
 
 .price .card {
+  z-index: 1;
   border-color: #cfebfc;
 }
 
@@ -645,21 +648,22 @@ figcaption {
   margin-right: 0.5102rem;
 }
 
-.cabinet__form .form-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .cabinet__form .form-footer .btn {
   margin-left: auto;
 }
 
 .cabinet__form .form-footer .btn + .btn {
   margin-left: 0.71429rem;
+}
+
+.cabinet__form .save-buttons,
+.cabinet__form .edit-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .card-order__title {

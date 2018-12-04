@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-custom.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/fontawesome-custom.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" /> </head>
-  <body>
+  <body data-spy="scroll" data-target="#mainNav" data-offset="0">
     <div class="visuallyhidden">
       <svg xmlns="http://www.w3.org/2000/svg">
         <symbol id="icon-filters_01" viewBox="0 0 512 512">
@@ -27,7 +27,7 @@
       </svg>
     </div>
     <!-- start .navbar -->
-    <nav class="navbar navbar-dark navbar-expand-lg col">
+    <nav class="navbar navbar-dark navbar-expand-lg col" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="images/hr-logo.png" alt="Логотип Гардова роса">
@@ -43,19 +43,19 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Про воду</a>
+              <a class="nav-link" href="#about">Про воду</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Про проект</a>
+              <a class="nav-link" href="#product">Про проект</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Ціни</a>
+              <a class="nav-link" href="#price">Локації та тарифи</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Партнерам</a>
+              <a class="nav-link" href="#partners">Стати партнером</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Контакти</a>
+              <a class="nav-link" href="#contact">Контакти</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cabinet.html">Кабінет</a>
@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class="cabinet-container--right">
-          <div class="cabinet__form">
+          <div class="cabinet__form" id="editPersonalInfoForm">
             <form>
               <div class="form-group">
                 <label class="form-label" for="registrationName">Прізвище та ім'я</label>
@@ -155,24 +155,33 @@
                 <label class="form-label" for="registrationAddress">Адреса</label>
                 <input type="text" class="form-control  form-control-sm" id="registrationAddress" aria-describedby="emailHelp" value="м. Хмельницький, вул. Шевченко 69" disabled=""> </div>
               <div class="form-footer">
-                <button type="button" class="btn btn-sm btn-light">Змінити пароль</button>
-                <button type="button" class="btn btn-sm btn-light">Редагувати дані</button>
+                <div class="save-buttons" style="display:none">
+                  <button type="button" class="btn btn-sm btn-light" id="cabinetEditPersonalInfoCancel">Відміна</button>
+                  <button type="button" class="btn btn-sm btn-success" id="cabinetEditPersonalInfoSave">Зберегти</button>
+                </div>
+                <div class="edit-buttons">
+                  <button type="button" class="btn btn-sm btn-light" id="cabinetChangePassword">Змінити пароль</button>
+                  <button type="button" class="btn btn-sm btn-light" id="cabinetEditPersonalInfo">Редагувати дані</button>
+                </div>
               </div>
             </form>
           </div>
-          <div class="cabinet__form" style="display:none">
+          <div class="cabinet__form" id="changePasswordForm" style="display:none">
             <form>
               <div class="form-group">
                 <label class="form-label" for="currentPassword">Поточний пароль</label>
-                <input type="password" class="form-control  form-control-sm" id="currentPassword" aria-describedby="emailHelp" value="password" disabled=""> </div>
+                <input type="password" class="form-control  form-control-sm" id="currentPassword" aria-describedby="emailHelp" value="password"> </div>
               <div class="form-group">
                 <label class="form-label" for="newPassword">Новий пароль</label>
-                <input type="password" class="form-control  form-control-sm" id="newPassword" aria-describedby="emailHelp" disabled=""> </div>
+                <input type="password" class="form-control  form-control-sm" id="newPassword" aria-describedby="emailHelp"> </div>
               <div class="form-group">
                 <label class="form-label" for="newPasswordAgain">Новий ще раз</label>
-                <input type="password" class="form-control  form-control-sm" id="newPasswordAgain" aria-describedby="emailHelp" disabled=""> </div>
+                <input type="password" class="form-control  form-control-sm" id="newPasswordAgain" aria-describedby="emailHelp"> </div>
               <div class="form-footer">
-                <button type="button" class="btn btn-sm btn-light">Змінити пароль</button>
+                <div class="save-buttons">
+                  <button type="button" class="btn btn-sm btn-light" id="cabinetChangePasswordCancel">Відміна</button>
+                  <button type="button" class="btn btn-sm btn-success" id="cabinetChangePasswordSave">Змінити пароль</button>
+                </div>
               </div>
             </form>
           </div>

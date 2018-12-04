@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-custom.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/fontawesome-custom.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" /> </head>
-  <body>
+  <body data-spy="scroll" data-target="#mainNav" data-offset="0">
     <div class="visuallyhidden">
       <svg xmlns="http://www.w3.org/2000/svg">
         <symbol id="icon-filters_01" viewBox="0 0 512 512">
@@ -27,7 +27,7 @@
       </svg>
     </div>
     <!-- start .navbar -->
-    <nav class="navbar navbar-dark navbar-expand-lg col">
+    <nav class="navbar navbar--fixed navbar-dark navbar-expand-lg col" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="images/hr-logo.png" alt="Логотип Гардова роса">
@@ -43,19 +43,19 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Про воду</a>
+              <a class="nav-link" href="#about">Про воду</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Про проект</a>
+              <a class="nav-link" href="#product">Про проект</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Ціни</a>
+              <a class="nav-link" href="#price">Локації та тарифи</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Партнерам</a>
+              <a class="nav-link" href="#partners">Стати партнером</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Контакти</a>
+              <a class="nav-link" href="#contact">Контакти</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cabinet.html">Кабінет</a>
@@ -76,7 +76,7 @@
       </div>
     </main>
     <!-- end .hero -->
-    <div class="section about">
+    <div class="section about" id="about">
       <!-- start .section.about -->
       <div class="container">
         <header class="section__header align-center">
@@ -113,7 +113,7 @@
       </div>
     </div>
     <!-- end .section.about -->
-    <div class="section about product">
+    <div class="section about product" id="product">
       <!-- start .section.about.product -->
       <div class="container">
         <header class="section__header">
@@ -138,14 +138,32 @@
       </div>
     </div>
     <!-- end .section.about.product -->
-    <div class="section about price">
+    <div class="section about price" id="price">
       <!-- start .section.about.price -->
       <div class="container">
         <header class="section__header">
-          <h2 class="section__title">Локації та ціни</h2>
+          <h2 class="section__title">Локації та тарифи</h2>
         </header>
         <div class="about__body">
           <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Миколаївська область </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <table class="table table-borderless">
+                    <tr>
+                      <td>м. Южноукраїнськ</td>
+                      <td>1 грн.</td>
+                    </tr>
+                    <tr>
+                  </table>
+                </div>
+              </div>
+            </div>
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
@@ -156,39 +174,12 @@
                 <div class="card-body">
                   <table class="table table-borderless">
                     <tr>
-                      <td>Хмельницький</td>
+                      <td>м. Хмельницький</td>
                       <td>1 грн.</td>
                     </tr>
                     <tr>
-                      <td>Городок</td>
-                      <td>1.2 грн.</td>
-                    </tr>
-                    <tr>
-                      <td>Кам'янець-Подільський</td>
-                      <td>1.1 грн.</td>
-                    </tr>
                   </table>
                 </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Тернопільська область </button>
-                </h5>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body"></div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Вінницька область </button>
-                </h5>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body"></div>
               </div>
             </div>
           </div>
@@ -196,7 +187,7 @@
       </div>
     </div>
     <!-- end .section.about.price -->
-    <div class="section about partners">
+    <div class="section about partners" id="partners">
       <!-- start .section.about.partners -->
       <div class="container">
         <header class="section__header">
@@ -205,21 +196,21 @@
         <div class="about__body">
           <div class="text-center">
             <h4>Мета</h4>
-            <p>Метою даного проекту є забезпечення населення України якісною очищеною питною водою. Даний проект є комерційним і передбачає отримання прибутку всіма субьектами господарювання залученими у ньому.</p>
+            <p>Метою даного проекту є забезпечення населення України якісною очищеною питною водою. Даний проект є комерційним і передбачає отримання прибутку всіма субьектами господарювання залученими до нього.</p>
             <br>
             <h4>Бачення</h4>
-            <p>Для досягнення мети ми створюємо разгалужену мережу пристроїв по очищенню, розливу та продажу води здійснюємо її комерційну експлуатації, технічне обслуговування та заходи по залученню спожівачів.</p>
+            <p>Для досягнення мети ми створюємо разгалужену мережу пристроїв по очищенню, розливу та продажу води, здійснюємо її комерційну експлуатацію, технічне обслуговування та заходи по залученню спожівачів.</p>
             <br> </div>
-          <a class="btn btn-block btn-light text-left collapsed" type="button" data-toggle="collapse" href="#forPartners01" aria-expanded="false" aria-controls="forPartners01">
-            <span>▶</span> Ми </a>
+          <button class="btn btn-block btn-light text-left collapsed" type="button" data-toggle="collapse" data-target="#forPartners01" aria-expanded="false" aria-controls="forPartners01">
+            <span>▶</span> Ми </button>
           <div class="collapse" id="forPartners01">
             <div class="card card-body">
               <strong>Франчайзер</strong>
               <p>Власники патенту, торгової марки та моделі бізнесу за допомоги яких здійснюється діяльність.</p>
             </div>
           </div>
-          <a class="btn btn-block btn-light text-left collapsed" type="button" data-toggle="collapse" href="#forPartners02" aria-expanded="false" aria-controls="forPartners02">
-            <span>▶</span> НАШІ Партнери або Ділери </a>
+          <button class="btn btn-block btn-light text-left collapsed" type="button" data-toggle="collapse" data-target="#forPartners02" aria-expanded="false" aria-controls="forPartners02">
+            <span>▶</span> НАШІ Партнери або Ділери </button>
           <div class="collapse" id="forPartners02">
             <div class="card card-body">
               <p>
@@ -230,22 +221,20 @@
                 <li>ОСББ, ОК, ЖЕУ, ЖЕП, а також власники торговельно-розважальних та бізнес центрів які проводять комерційну експлуатацію споруд;</li>
                 <li>Приватні особи(мешканці багатоквартирних будинків), активні люди які мають вільні кошти та бажання вести бізнес у даному сегменті послуг.</li>
               </ul>
-              <p>Іншим словом
-                <strong>Франчайзі.</strong>
-              </p>
               <br>
-              <strong>Партнер або Ділер</strong>
-              <p>Фізична або юридична особа, яка за власний кошт побудувала сигмент мережі та за договором франчайзингу здійснює його комерційну експлуатацію, технічне обслуговування мережі, проводить заходи по залученню клієнтів та реалізації карток.</p>
+              <strong>Партнери або Ділери</strong>
+              <p>Іншим словом Франчайзі, Інвестор, Агент.</p>
+              <p>Фізична особа підприємець, яка за власний кошт побудувала сигмент мережі та за договором франчайзингу здійснює його комерційну експлуатацію, технічне обслуговування мережі, проводить заходи по залученню клієнтів та реалізації карток.</p>
               <br>
               <strong>Інвестор</strong>
-              <p>Фізична або юридична особа, яка за власний чи залучений кошт побудувала сигмент мережі та за договором франчайзингу не здійснює його експлуатацію, а лише отримує відсоток винагороди від його комерційної експлуатації іншим суб'єктом господарювання.</p>
+              <p>ізична особа підприємець, яка за власний чи залучений кошт побудувала сигмент мережі та за договором франчайзингу не здійснює його експлуатацію, а лише отримує відсоток винагороди від його комерційної експлуатації іншим суб'єктом господарювання.</p>
               <br>
               <strong>Агент</strong>
               <p>Фізична або юридична особа, яка за договором з Партнером/Ділером проводить виключно заходи по залученню клієнтів та реалізації карток.</p>
             </div>
           </div>
-          <a class="btn btn-block btn-light text-left collapsed" type="button" data-toggle="collapse" href="#forPartners03" aria-expanded="false" aria-controls="forPartners03">
-            <span>▶</span> НАШІ Клієнти або споживачі послуги </a>
+          <button class="btn btn-block btn-light text-left collapsed" type="button" data-toggle="collapse" data-target="#forPartners03" aria-expanded="false" aria-controls="forPartners03">
+            <span>▶</span> НАШІ Клієнти або споживачі послуги </button>
           <div class="collapse" id="forPartners03">
             <div class="card card-body">
               <ul>
@@ -258,7 +247,7 @@
       </div>
     </div>
     <!-- end .section.about.partners -->
-    <div class="section contact-us">
+    <div class="section contact-us" id="contact">
       <div class="container">
         <h4 class="text-center">Заробляйте разом з нами! Ми пропонуємо вам зрозумілий основний та додатковий прибуток.</h4>
         <div class="alert alert-primary text-center h5">Надішліть нам запит поштою:
