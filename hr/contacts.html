@@ -66,34 +66,55 @@
     </nav>
     <!-- end .navbar -->
     <!-- BEGIN content -->
-    <!-- start .hero -->
-    <main role="main" class="hero hero--login">
-      <div class="hero-container container">
-        <div class="hero-container--left">
-          <!-- start .hero-container--left -->
-          <h1 class="hero-heading">Відновлення пароля</h1>
-        </div>
-        <!-- end .hero-container--left -->
-        <div class="hero-container--right">
-          <!-- start .hero-container--right -->
-          <div class="hero__form">
-            <form>
-              <div class="form-group flex-wrap">
-                <label class="form-label" for="loginEmail">E-mail</label>
-                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="ваш e-mail">
-                <small class="form-text text-muted">E-mail який ви вказували при реєстрації</small>
+    <div class="section about price contacts" id="contacts">
+      <!-- start .section.about.price.contacts -->
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Наші контакти</h2>
+        </header>
+        <div class="about__body">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Миколаївська область </button>
+                </h5>
               </div>
-              <div class="form-footer">
-                <a href="login.html">Згадали пароль?</a>
-                <button type="submit" class="btn btn-primary">Відновити</button>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <table class="table table-borderless">
+                    <tr>
+                      <td>м. Южноукраїнськ</td>
+                      <td>(097) 123-45-67</td>
+                    </tr>
+                    <tr>
+                  </table>
+                </div>
               </div>
-            </form>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-block btn-link text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> Хмельницька область </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <table class="table table-borderless">
+                    <tr>
+                      <td>м. Хмельницький</td>
+                      <td>(067) 123-45-67</td>
+                    </tr>
+                    <tr>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- end .hero-container--right -->
       </div>
-    </main>
-    <!-- end .hero -->
+    </div>
+    <!-- end .section.about.price.contacts -->
     <!-- END content -->
     <footer class="main-footer">
       <div class="container"> Гардова роса&copy2018 </div>

@@ -98,6 +98,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Fira Sans', sans-serif;
+  min-height: 100vh;
 }
 
 figcaption {
@@ -123,7 +124,7 @@ figcaption {
 .main-footer {
   background-color: #003459;
   padding: 1.4rem 0;
-  margin-top: 1.96rem;
+  margin-top: auto;
   color: white;
 }
 
@@ -370,7 +371,7 @@ figcaption {
 
 @media (min-width: 768px) {
   .about figure {
-    width: 35%;
+    width: 40%;
   }
 }
 
@@ -457,15 +458,19 @@ figcaption {
   font-weight: 700;
 }
 
-.contact-us .container {
+.contact-us {
   width: 90%;
   padding: 1rem;
-  background-color: #f5fbfe;
+  margin-top: 3.8416rem;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 576px) {
-  .contact-us .container {
-    width: 60%;
+  .contact-us {
+    width: 50%;
     padding: 1.96rem;
   }
 }
@@ -483,6 +488,7 @@ figcaption {
   margin-top: 1.4rem;
   padding: 1rem;
   border: 1px solid #cfebfc;
+  background-color: #f5fbfe;
   border-radius: 5px;
 }
 
