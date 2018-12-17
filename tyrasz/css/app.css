@@ -1,0 +1,809 @@
+@charset "UTF-8";
+
+/* fira-sans-100 - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Fira Sans Thin"), local("FiraSans-Thin"), url("../fonts/fira-sans-v8-latin_cyrillic-100.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-100.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-100italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 100;
+  src: local("Fira Sans Thin Italic"), local("FiraSans-ThinItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-100italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-100italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-200 - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Fira Sans ExtraLight"), local("FiraSans-ExtraLight"), url("../fonts/fira-sans-v8-latin_cyrillic-200.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-200.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-200italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 200;
+  src: local("Fira Sans ExtraLight Italic"), local("FiraSans-ExtraLightItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-200italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-200italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-300 - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Fira Sans Light"), local("FiraSans-Light"), url("../fonts/fira-sans-v8-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-300.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-300italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Fira Sans Light Italic"), local("FiraSans-LightItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-300italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-300italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-regular - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans Regular"), local("FiraSans-Regular"), url("../fonts/fira-sans-v8-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Fira Sans Italic"), local("FiraSans-Italic"), url("../fonts/fira-sans-v8-latin_cyrillic-italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-500 - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Fira Sans Medium"), local("FiraSans-Medium"), url("../fonts/fira-sans-v8-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-500italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local("Fira Sans Medium Italic"), local("FiraSans-MediumItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-500italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-500italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-600 - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Fira Sans SemiBold"), local("FiraSans-SemiBold"), url("../fonts/fira-sans-v8-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-600italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local("Fira Sans SemiBold Italic"), local("FiraSans-SemiBoldItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-600italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-600italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-700 - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Fira Sans Bold"), local("FiraSans-Bold"), url("../fonts/fira-sans-v8-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-700italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Fira Sans Bold Italic"), local("FiraSans-BoldItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-700italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-700italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-800 - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Fira Sans ExtraBold"), local("FiraSans-ExtraBold"), url("../fonts/fira-sans-v8-latin_cyrillic-800.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-800italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: local("Fira Sans ExtraBold Italic"), local("FiraSans-ExtraBoldItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-800italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-800italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-900 - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Fira Sans Black"), local("FiraSans-Black"), url("../fonts/fira-sans-v8-latin_cyrillic-900.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-900.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fira-sans-900italic - latin_cyrillic */
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 900;
+  src: local("Fira Sans Black Italic"), local("FiraSans-BlackItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-900italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-900italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* init styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  color: #002740;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */
+}
+
+.button {
+  margin: 4.16493px 0;
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.15);
+  font-family: "Fira Sans Condensed", "Fira Sans", sans-serif;
+  font-size: 0.85rem;
+  border: 1px solid #d5dbe0;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  background-color: #eceff1;
+  color: #333333;
+  display: inline-block;
+  padding: 8.16327px 16px;
+  text-decoration: none;
+}
+
+.button:hover {
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: #1a1a1a;
+  background-color: #e6eaed;
+}
+
+.button:active {
+  background-color: #dde3e6;
+}
+
+.button--primary {
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.4);
+  font-family: "Fira Sans Condensed", "Fira Sans", sans-serif;
+  font-size: 0.85rem;
+  border: 1px solid #00639a;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  background-color: #007dc3;
+  color: white;
+  display: inline-block;
+  padding: 8.16327px 16px;
+  text-decoration: none;
+}
+
+.button--primary:hover {
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  color: white;
+  background-color: #0076b9;
+}
+
+.button--primary:active {
+  background-color: #006daa;
+}
+
+.button--secondary {
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.4);
+  font-family: "Fira Sans Condensed", "Fira Sans", sans-serif;
+  font-size: 0.85rem;
+  border: 1px solid #d67400;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  background-color: #ff8a00;
+  color: white;
+  display: inline-block;
+  padding: 8.16327px 16px;
+  text-decoration: none;
+}
+
+.button--secondary:hover {
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  color: white;
+  background-color: #f58400;
+}
+
+.button--secondary:active {
+  background-color: #e67c00;
+}
+
+.button + .button {
+  margin-left: 16px;
+}
+
+.text--primary {
+  color: #007dc3 !important;
+}
+
+.text--secondary {
+  color: #ff8a00 !important;
+}
+
+.section {
+  width: 100%;
+  padding-top: 61.4656px;
+  padding-bottom: 61.4656px;
+}
+
+.section__header {
+  width: 100%;
+  margin-bottom: 43.904px;
+}
+
+.section__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 96%;
+}
+
+.header,
+.hero {
+  width: 100%;
+}
+
+.section__title {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 8.16327px;
+  font-size: 2rem;
+  color: #007dc3;
+  border-bottom: 3px solid #ff8a00;
+}
+
+.section__title:after {
+  position: relative;
+  z-index: 0;
+  top: 3px;
+  content: '';
+  display: block;
+  height: 3px;
+  width: calc(200% + 10px);
+  margin-left: -200%;
+  background-color: #ff8a00;
+}
+
+.text__blocks:before,
+.text__blocks:after {
+  content: "";
+  display: table;
+}
+
+.text__blocks:after {
+  clear: both;
+}
+
+.text__blocks--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text__blocks img {
+  float: right;
+  width: 60%;
+  height: auto;
+}
+
+.text__title {
+  width: 100%;
+  margin: 61.4656px 0 16px;
+  color: #007dc3;
+  text-transform: uppercase;
+}
+
+.text__subtitle {
+  margin: 4.16493px 0;
+  color: #007dc3;
+}
+
+.half-width {
+  width: 100%;
+}
+
+.quarter-width {
+  width: 100%;
+  margin-top: 31.36px;
+}
+
+.quarter-width ul,
+.quarter-width strong {
+  display: block;
+  padding-left: 16px;
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figure small {
+  display: block;
+  margin: 4.16493px 0;
+}
+
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #007dc3;
+  box-shadow: 0 4px 12px -1px rgba(0, 0, 0, 0.5);
+}
+
+.header .section__inner {
+  align-items: center;
+}
+
+.header a {
+  color: white;
+  font-size: 1rem;
+}
+
+.header__logo a {
+  display: block;
+}
+
+.header__logo a:hover {
+  color: #ff8a00;
+}
+
+.header__logo svg,
+.header__logo h1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header__logo svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header__logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.header__nav .hamburger {
+  display: inline-block;
+  font-size: 0;
+}
+
+.header__nav .hamburger.is-active + .site-menu {
+  max-height: 1000px;
+}
+
+.header__nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.header__nav li {
+  display: block;
+  color: white;
+}
+
+.header__nav li:hover,
+.header__nav li.is-active {
+  color: #ff8a00;
+}
+
+.header__nav li.has-submenu {
+  position: relative;
+}
+
+.header__nav li.has-submenu div {
+  position: relative;
+}
+
+.header__nav li.has-submenu div:after {
+  content: '▼';
+  font-size: 12px;
+}
+
+.header__nav li.has-submenu.is-active .site-menu__submenu {
+  max-height: 1000px;
+}
+
+.header__nav .site-menu {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  max-height: 0;
+  min-width: 60%;
+  padding: 0 22.4px;
+  overflow: hidden;
+  background-color: rgba(0, 125, 195, 0.95);
+  transition-duration: .2s;
+}
+
+.header__nav .site-menu div,
+.header__nav .site-menu a {
+  display: block;
+  width: 100%;
+  padding: 22.4px 0;
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.header__nav .site-menu__item {
+  transition-duration: .2s;
+}
+
+.header__nav .site-menu__submenu {
+  padding: 0 16px;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition-duration: .2s;
+  white-space: nowrap;
+}
+
+.hero {
+  position: relative;
+  background-image: url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  min-height: 100vh;
+}
+
+.hero__content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 61.4656px 31.36px 31.36px;
+  color: white;
+  font-size: 1.15rem;
+}
+
+.hero__content-bg {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 96%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #002740;
+  opacity: .85;
+}
+
+.hero__title {
+  font-size: 1.8rem;
+}
+
+.technical + .technical {
+  background-image: url(../images/brushed_alu.png);
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #fff;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+   * Slider
+   */
+
+.hamburger--slider .hamburger-inner {
+  top: 2px;
+}
+
+.hamburger--slider .hamburger-inner::before {
+  top: 10px;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+}
+
+.hamburger--slider .hamburger-inner::after {
+  top: 20px;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--slider.is-active .hamburger-inner::before {
+  -webkit-transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+          transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+  opacity: 0;
+}
+
+.hamburger--slider.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -20px, 0) rotate(-90deg);
+          transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+
+@media (min-width: 576px) {
+  .section__inner {
+    max-width: 96%;
+  }
+}
+
+@media (min-width: 768px) {
+  .section__inner {
+    max-width: 728px;
+  }
+
+  .text__blocks img {
+    width: 35%;
+  }
+
+  .half-width {
+    width: 48%;
+  }
+
+  .quarter-width {
+    width: 46%;
+  }
+
+  .header__nav .hamburger {
+    display: none;
+  }
+
+  .header__nav li.has-submenu div:after {
+    margin-left: 2px;
+  }
+
+  .header__nav li.has-submenu:hover .site-menu__submenu {
+    max-height: 1000px;
+  }
+
+  .header__nav .site-menu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 1000px;
+    overflow: visible;
+  }
+
+  .header__nav .site-menu div,
+  .header__nav .site-menu a {
+    padding: 16px 22.4px;
+  }
+
+  .header__nav .site-menu__item:hover {
+    background-color: #008ad7;
+  }
+
+  .header__nav .site-menu__submenu {
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    background-color: #008ad7;
+    text-align: right;
+  }
+
+  .hero__content {
+    margin-left: 40%;
+    padding-top: 86.05184px;
+  }
+
+  .hero__content-bg {
+    width: 60%;
+    bottom: initial;
+    left: initial;
+  }
+
+  .hero__title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .section__inner {
+    max-width: 952px;
+  }
+
+  .quarter-width {
+    width: 22%;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section__inner {
+    max-width: 1240px;
+  }
+}
+
+@media (max-width: 767.9px) {
+  .header__nav li.has-submenu div:after {
+    position: absolute;
+    right: 0;
+    margin-top: 4px;
+  }
+}
