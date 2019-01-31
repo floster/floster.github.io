@@ -361,7 +361,7 @@
 }
 
 .text-section__column {
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
 }
 
 .text-section--warning {
@@ -547,6 +547,11 @@
 
   .news-item.text-block p {
     font-size: .95rem;
+  }
+
+  .text-section__column {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
