@@ -188,6 +188,11 @@
   margin-left: auto;
 }
 
+.main-nav .navbar-expand-lg .navbar-toggler-label {
+  position: relative;
+  top: .1em;
+}
+
 .main-nav .navbar-expand-lg .navbar-nav .nav-link {
   display: inline-block;
   vertical-align: middle;
