@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BazaAvtoZvuka</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/lightslider.min.css">
+</head>
+<body>
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+	  <symbol id="search" viewBox="0 0 24 24">
+	    <title>search</title>
+	    <path style="fill:#333;" d="M23.8 21.6l-6.2-6.2c1.2-1.6 2-3.5 2-5.7C19.6 4.4 15 0 9.6 0 4.5 0 0 4.4 0 9.7c0 5.4 4.4 9.8 9.7 9.8 2 0 4-.7 5.5-1.7l6.3 6.2 2.3-2.4zm-21-12C3 6 6 3 10 3s6.8 3 6.8 6.7-3 7-7 7C6 16.7 3 13.4 3 9.7z"/>
+	  </symbol>
+	  <symbol id="arrow_down" viewBox="0 0 24 24">
+	    <title>arrow_down</title>
+	    <path style="fill:#333;" d="M0 7.3l2.8-2.8 9.2 9.3 9.2-9.3L24 7.3 12 19.5z"/>
+	  </symbol>
+	  <symbol id="arrow_down--red" viewBox="0 0 24 24">
+	    <title>arrow_down</title>
+	    <path style="fill:#fb2539;" d="M0 7.3l2.8-2.8 9.2 9.3 9.2-9.3L24 7.3 12 19.5z"/>
+	  </symbol>
+	  <symbol id="arrow_left" viewBox="0 0 24 24">
+	    <title>arrow_left</title>
+	    <path style="fill:#fff;" d="M16.7 0l2.8 2.8-9.3 9.2 9.3 9.2-2.8 2.8L4.5 12z"/>
+	  </symbol>
+	  <symbol id="arrow_right" viewBox="0 0 24 24">
+	    <title>arrow_right</title>
+	    <path style="fill:#fff;" d="M7.3 24l-2.8-2.8 9.3-9.2-9.3-9.2L7.3 0l12.2 12z"/>
+	  </symbol>
+	  <symbol id="arrow_right--red" viewBox="0 0 24 24">
+	    <title>arrow_right--red</title>
+	    <path style="fill:#fb2539;" d="M7.3 24l-2.8-2.8 9.3-9.2-9.3-9.2L7.3 0l12.2 12z"/>
+	  </symbol>
+	  <symbol id="star_contur" viewBox="0 0 24 24">
+	    <title>star_contur</title>
+	    <path style="fill:#777;" d="M12 5.2l2.3 4.8 5.3.7-3.8 3.7 1 5.3-4.8-2.5-4.7 2.5 1-5.3-4-3.7 5.4-.7L12 5.2zm0-4.6L8.3 8.2 0 9.2l6 6-1.4 8.2 7.4-4 7.4 4L18 15l6-5.7-8.3-1L12 .5z"/>
+	  </symbol>
+	  <symbol id="star_half" viewBox="0 0 24 24">
+	    <title>star_half</title>
+	    <path style="fill:#ffdc2c;" d="M12 5.2l2.3 4.8 5.3.7-3.8 3.7 1 5.3-4.8-2.5v-12zm0-4.6L8.3 8.2 0 9.2l6 6-1.4 8.2 7.4-4 7.4 4L18 15l6-5.7-8.3-1L12 .5z"/>
+	  </symbol>
+	  <symbol id="star_full" viewBox="0 0 24 24">
+	    <title>star_full</title>
+	    <path style="fill:#ffdc2c;" d="M12 .6l3.7 7.6 8.3 1-6 6 1.4 8.2-7.4-4-7.4 4L6 15 0 9.4l8.3-1z"/>
+	  </symbol>
+	  <symbol id="help" viewBox="0 0 24 24">
+	    <title>help</title>
+	    <path style="fill:#777;" d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2zm0-2C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm1.3 17c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3zm1.3-10C14 6.4 13 6 12 6c-2 0-3.5 1.6-3.5 4h2c0-1.5.8-2 1.6-2s1.6.4 1.6 1.2c0 1-.4 1.3-1 1.8-1.4 1.4-1.4 2-1.4 3.5h2c0-.7 0-1.2 1-2.2.7-.7 1.6-1.6 1.6-3 0-1-.3-1.7-1-2.3z"/>
+	  </symbol>
+	  <symbol id="comment" viewBox="0 0 24 24">
+	    <title>comment</title>
+	    <path style="fill:#777;" d="M22 3v13H10.4L6 19v-3H2V3h20zm2-2H0v17h4v5l7-5h13V1z"/>
+	  </symbol>
+	  <symbol id="scales" viewBox="0 0 139 139">
+	    <title>scales</title>
+	    <style>.st0{fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;} .st1{stroke:#000000;stroke-miterlimit:10;}</style>
+	    <path class="st0" d="M34.8 44.4l-22.3 34s5.4 8 22.2 8" id="XMLID_7_"/><path class="st0" d="M34.8 86.5c17 0 22.2-8 22.2-8l-22.2-34v-5h69.4v5l22.2 34s-5.4 8-22.2 8" id="XMLID_6_"/><path class="st0" d="M104.2 44.4L82 78.4s5.4 8 22.2 8" id="XMLID_11_"/><path class="st0" id="XMLID_9_" d="M69.5 106.6V31"/><path class="st0" id="XMLID_10_" d="M94.7 106.6H44.2"/><path class="st1" d="M12.5 78.5H57s-22.3 16.5-44.5 0z" id="XMLID_8_"/><path class="st1" d="M82 78.5h44.5S104.2 95 82 78.5z" id="XMLID_13_"/>
+	  </symbol>
+	  <symbol id="share" viewBox="0 0 96 96">
+	    <title>share</title>
+	    <path style="fill:#333;" d="M72 56c-4.8 0-9 2-12 5.5l-20.4-10C40 50 40 49 40 48s0-2.3-.4-3.3L60 34.5C63 38 67 40 72 40c8.8 0 16-7.2 16-16S80.8 8 72 8s-16 7.2-16 16c0 1 0 2.3.4 3.3L36 37.5C33 34 29 32 24 32c-8.8 0-16 7.2-16 16s7.2 16 16 16c4.8 0 9-2 12-5.5l20.4 10.2c-.3 1-.4 2.2-.4 3.3 0 8.8 7.2 16 16 16s16-7.2 16-16-7.2-16-16-16zm0-40c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8zM24 56c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm48 24c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/>
+	  </symbol>
+	  <symbol id="check" viewBox="0 0 24 24">
+	    <title>check</title>
+	    <path style="fill:#57ae85;" d="M9 21l-9-8.6 2.8-3 6 6L21.3 3 24 5.8z"/>
+	  </symbol>
+	  <symbol id="thumb_up" viewBox="0 0 24 24">
+	    <title>thumb_up</title>
+	    <path fill="#333" d="M21.4 9.6c-1.2 0-3-.3-4-.8.8-3.3 1.3-8.8-2.2-8.8-1.8 0-2.3 1.7-2.8 3.3C11 8.7 8.4 10 6 10.7V10H0v12h6v-1c2.4.3 4 1 6.2 1.8 1.2.6 3 1.2 5.3 1.2 2.5 0 4.3-1 5-3.7.5-2 1.5-7.2 1.5-8.2 0-1.6-1.2-2.4-2.6-2.4zM4 20H2v-8h2v8zm16-5.6h1c1 0 1 1.5 0 1.6h-1.8c-.7 0-.6 1.3 0 1.2h1.3c1 0 1 1.4 0 1.5h-1.7c-.8.2-.7 1.4 0 1.3h1c.7 0 1 .8-.4 1.6-1.6 1-4.7.2-6.4-.6-2.3-1-4.5-2-7-2v-6c3.3-.7 6.3-2.3 8.3-9 1-3.2 1.7-2 1.7.5 0 2-.5 3.7-1 5.5 1 .5 3.5 1.4 6.2 1.5 1 0 1 1.5 0 1.6l-1.4.3s-.7 1 0 1z"/>
+	  </symbol>
+	  <symbol id="thumb_down" viewBox="0 0 24 24">
+	    <title>thumb_down</title>
+	    <path fill="#333" d="M24 12c0-1-1-6.4-1.5-8.3C21.8 1 20 0 17.5 0c-2.3 0-4 .6-5.3 1.2C10.2 2 8.4 2.7 6 3V2H0v12h6v-.7c2.5.6 5 2 6.4 7.4.5 1.6 1 3.3 2.8 3.3 3.5 0 3-5.5 2.2-8.8 1-.5 2.8-.7 4-.8 1.4 0 2.6-.8 2.6-2.5zM4 12H2V4h2v8zm15.8-1.3l1.3.2c1.2 0 1.3 1.4.2 1.4-2.7.2-5 1-6 1.6.3 1.8.8 3.5.8 5.5 0 2.5-.8 3.7-1.7.6-2-6.7-5-8.3-8.3-9V5c2.5 0 4.7-1 7-2 1.7-.7 4.8-1.5 6.4-.6 1.3.8 1 1.7.3 1.6H19c-1 0-1 1-.2 1.2h1.7c1 .2 1 1.7 0 1.6h-1.2c-.7 0-.8 1 0 1 0 0 .6.2 1.7.2s1 1.7 0 1.6h-1c-1 0-1 1-.2 1z"/>
+	  </symbol>
+	  <symbol id="play" viewBox="0 0 24 24">
+	    <title>play</title>
+	    <path fill="#fb2539" d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2zm0-2C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM9 17V7l9 5-9 5z"/>
+	  </symbol>
+	  <symbol id="cube_3d" viewBox="0 0 24 24">
+	    <title>cube_3d</title>
+	    <path fill="#fb2539" d="M12 0L1 6v12l11 6 11-6V6L12 0zm8 6.6L12 11 4 6.5l8-4.3 8 4.3zM3 8.2l8 4.4v8.6L3 17V8zm10 13v-8.6l8-4.3V17L13 21z"/>
+	  </symbol>
+
+	  <symbol id="facebook" viewBox="0 0 24 24">
+	    <title>facebook</title>
+	    <path style="fill:#3b5998;" d="M9 8H6v4h3v12h5V12h3.6l.4-4h-4V6.3c0-1 .2-1.3 1-1.3h3V0h-3.8C10.6 0 9 1.6 9 4.6V8z"/>
+	  </symbol>
+	  <symbol id="google-plus" viewBox="0 0 24 24">
+	    <title>google-plus</title>
+	    <path style="fill:#dd4b39;" d="M7 11v2.4h4c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1l2-1.8C10.4 5.8 8.7 5 7 5c-4 0-7 3-7 7s3 7 7 7 6.7-2.8 6.7-6.8V11H7zm0 0l17 2h-3v3h-2v-3h-3v-2h3V8h2v3h3v2z" fill-rule="evenodd" clip-rule="evenodd"/>
+	  </symbol>
+	  <symbol id="twitter" viewBox="0 0 24 24">
+	    <title>twitter</title>
+	    <path style="fill:#1da1f2;" d="M24 4.6c-1 .3-1.8.6-2.8.7 1-.6 1.8-1.5 2-2.7-.8.6-2 1-3 1.2-1-1-2.2-1.6-3.6-1.6-3.2 0-5.5 3-4.8 6-4 0-7.7-2-10-5C.3 5.3 1 8 3 9.6c-.8 0-1.6-.2-2.2-.6 0 2.4 1.5 4.5 4 5-.8.2-1.5.2-2.3 0 .6 2 2.4 3.5 4.6 3.5-2 1.6-4.7 2.3-7.3 2 2.2 1.4 4.8 2.3 7.5 2.3 9.2 0 14.4-7.8 14-14.7 1-.6 1.8-1.5 2.5-2.4z"/>
+	  </symbol>
+	  <symbol id="youtube" viewBox="0 0 24 24">
+	    <title>youtube</title>
+	    <path style="fill:#cd201f;" d="M19.6 3.2C16 3 8 3 4.4 3.2.4 3.5 0 5.8 0 12c0 6.2.5 8.5 4.4 8.8 3.6.3 11.6.3 15.2 0 4-.2 4.4-2.6 4.4-8.8 0-6.2-.5-8.5-4.4-8.8zM9 16V8l8 4-8 4z"/>
+	  </symbol>
+	  <symbol id="vkontakte" viewBox="0 0 24 24">
+	    <title>vkontakte</title>
+	    <path style="fill:#45668e;" d="M13.2 19c.6 0 .8-.4.8-1 0-1.8.7-3 2-1.5 1.6 1.5 2 2.5 3.7 2.5H23c.7 0 1-.3 1-.7 0-.8-1.4-2.4-2.6-3.5-1.7-1.5-1.8-1.6-.3-3.5C23 9 25.3 6 23 6h-3.8c-.8 0-1 .4-1 1-1 2.4-3 5.5-3.8 5-.7-.5-.4-2.4-.3-5.3 0-.7 0-1.2-1-1.5L11 5C9 5 7.4 6 8.3 6c1.6.4 1.4 3.8 1 5.3-.6 2.5-3-2-4-4.3C5 6.4 5 6 4 6H.8c-.5 0-.8.2-.8.5 0 .6 3 6.7 5.8 9.8 2.7 3 5.5 2.7 7.4 2.7z"/>
+	  </symbol>
+	  <symbol id="instagram" viewBox="0 0 24 24">
+	    <title>instagram</title>
+	    <path style="fill:#833ab4;" d="M12 2.2h4.8c3.3.2 4.8 1.7 5 5v9.6c-.2 3.3-1.7 4.8-5 5H7.3c-3.3-.2-4.8-1.7-5-5V12 7.2c.2-3.3 1.7-4.8 5-5H12zM12 0H7C2.8.4.4 2.8 0 7v10c.3 4.3 2.7 6.7 7 7h10c4.3-.3 6.7-2.7 7-7v-5-5c-.3-4.3-2.7-6.7-7-7h-5zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2c0-3.4-2.8-6.2-6.2-6.2zM12 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm6.4-11.8c-.8 0-1.4.6-1.4 1.4S17.6 7 18.4 7c.8 0 1.4-.6 1.4-1.4s-.6-1.4-1.4-1.4z"/>
+	  </symbol>
+	</svg>
+
+	<div class="container">
+		<div class="top-bar">
+			<div class="top-bar__inner">
+				<nav class="main-nav">
+					<ul class="main-nav__inner">
+						<li class="main-nav__item"><a href="#">Контакты</a></li>
+						<li class="main-nav__item"><a href="#">Магазины</a></li>
+						<li class="main-nav__item"><a href="#">О нас</a></li>
+						<li class="main-nav__item"><a href="#">Доставка</a></li>
+						<li class="main-nav__item"><a href="#">Оплата</a></li>
+						<li class="main-nav__item"><a href="#">Бонусная программа</a></li>
+					</ul>
+				</nav>
+				<div class="lang-switch">
+					<ul class="lang-switch__inner">
+						<li class="lang-switch__item"><a class="active" href="#">Рус</a></li>
+						<li class="lang-switch__item"><a href="#">Укр</a></li>
+					</ul>
+				</div>
+				<div class="city-switch">
+					<label for="">Ваш город
+						<select name="" id="">
+							<option value="">Киев</option>
+							<option value="">Жмеринка</option>
+							<option value="">Одесса</option>
+							<option value="">Харьков</option>
+							<option value="">Хмельницкий</option>
+						</select>
+						<span class="svg-icon"><svg><use xlink:href="#arrow_down"></use></svg></span>
+					</label>
+				</div>
+				<div class="login-block">
+					<a href="#" class="login-block__item"><img src="images/icons/lock.png" alt="">Вход</a>
+					<a href="#" class="login-block__item">Регистрация</a>
+				</div>
+				<div class="cfx"></div>
+			</div>
+		</div>
+		<header class="main-header">
+			<div class="main-header__inner">
+				<div class="header-logo"><img src="images/main-logo.png" alt="Логотип "База Авто Звука""></div>
+				<div class="header-search main-search">
+					<form action="">
+						<input class="main-search__text" type="text" placeholder="Поиск по названию, коду, категории товара">
+						<a href="#" class="main-search__submit"><svg><use xlink:href="#search"></use></svg></a>
+					</form>
+				</div>
+				<div class="header-contacts">
+					<label class="header-contacts__select">
+						<select name="" id="">
+							<option value="">0-800-30-15-85</option>
+							<option value="">0-800-30-15-85</option>
+							<option value="">0-800-30-15-85</option>
+						</select>
+						<span class="svg-icon"><svg><use xlink:href="#arrow_down"></use></svg></span>
+					</label>
+					<a href="#" class="button button--yellow-border">Обратный звонок</a>
+				</div>
+				<div class="header-controls">
+					<a href="" class="header-controls__item">
+						<div class="header-controls__image">
+							<img src="images/icons/icon-garage.png" alt="">
+						</div>
+						<span class="header-controls__label">Гараж</span>
+					</a>
+					<a href="" class="header-controls__item">
+						<div class="header-controls__image">
+							<img src="images/icons/icon-heart.png" alt="">
+							<span class="badge">8</span>
+						</div>
+						<span class="header-controls__label">Избранное</span>
+					</a>
+					<a href="" class="header-controls__item">
+						<div class="header-controls__image">
+							<img src="images/icons/icon-scale.png" alt="">
+						</div>
+						<span class="header-controls__label">Сравнение</span>
+					</a>
+					<a href="" class="header-controls__item">
+						<div class="header-controls__image">
+							<img src="images/icons/icon-bascet.png" alt="">
+						</div>
+						<span class="header-controls__label">Корзина</span>
+					</a>
+				</div>
+				<div class="cfx"></div>
+			</div>
+			<nav class="header-nav">
+				<ul class="header-nav__inner">
+					<li class="header-nav__item catalog-button"><a href="">
+						<span>Каталог товаров</span>
+						<img src="images/icons/menu-catalog.png" alt="">
+					</a></li>
+					<li class="header-nav__item"><a href=""><img src="images/icons/menu-promotions.png" alt="">Акции</a></li>
+					<li class="header-nav__item"><a href=""><img src="images/icons/menu-tests.png" alt="">Сравнительные тесты</a></li>
+					<li class="header-nav__item"><a href=""><img src="images/icons/menu-how_to_choose.png" alt="">Как выбрать</a></li>
+					<li class="header-nav__item"><a href=""><img src="images/icons/menu-news.png" alt="">Новости</a></li>
+				</ul>
+			</nav>
+		</header> <!-- /.main-header -->
+
+		<main role="main" class="main-content">
+			<div class="breadcrumbs">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Запчасти и расходники</a></li>
+					<li><a href="#">Масло</a></li>
+					<li><a href="#">Моторное масло</a></li>
+					<li><a href="#">Mobil</a></li>
+					<li><span>Моторное масло MOBIL Super 3000 X1 5W-40, 4л</span></li>
+				</ul>
+			</div> <!-- /.breadcrumbs -->
+
+			<article class="theproduct">
+				<header class="theproduct-header">
+					<h1 class="theproduct-header__title">Моторное масло MOBIL Super 3000 X1 5W-40, 4л</h1>
+					<span class="theproduct-header__article">Код товара: 392038</span>
+					<div class="cfx"></div>
+				</header>
+
+				<div class="theproduct__gallery">
+					<img src="images/product/shell_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л" class="theproduct__current-image">
+					<div class="theproduct__previews">
+						<a class="active" href="#"><img src="images/product/shell_bottle.png" alt=""></a>
+						<a href="#" class="three-d"><img src="" alt="">
+							<span><svg><use xlink:href="#cube_3d"></use></svg></span>
+						</a>
+						<a href="#" class="video">
+							<img src="images/video_preview_02.png" alt="">
+							<span><svg><use xlink:href="#play"></use></svg></span>
+						</a>
+						<a href="#"><img src="images/gallery_no-item.png" alt=""></a>
+						<a href="#"><img src="images/gallery_no-item.png" alt=""></a>
+						<div class="cfx"></div>
+					</div>
+				</div>
+
+				<section class="theproduct__info">
+					<div class="theproduct__statusline">
+						<span class="statusline__availability">Нет в наличии</span>
+						<span class="statusline__rating">
+							<span><svg><use xlink:href="#star_full"></use></svg></span>
+							<span><svg><use xlink:href="#star_full"></use></svg></span>
+							<span><svg><use xlink:href="#star_full"></use></svg></span>
+							<span><svg><use xlink:href="#star_full"></use></svg></span>
+							<span><svg><use xlink:href="#star_contur"></use></svg></span>
+						</span>
+						<span class="statusline__testimonials">
+							<svg><use xlink:href="#comment"></use></svg>
+							<a href="#">3 отзыва</a>
+						</span>
+						<span class="statusline__questions">
+							<svg><use xlink:href="#helpс"></use></svg>
+							<a href="#">4 вопроса</a>
+						</span>
+					</div>
+					<div class="cfx"></div>
+					<div class="theproduct__description">
+						<h2 class="theproduct__price unavailable">456 <small>грн.</small></h2>
+						<a href="#" class="button button-block button--red-border">Сообщить о поступлении</a>
+						<p>ELF Tranself NFJ 75W-80 1л - Трансмиссионное масло</p>
+						<p>Тип масла: Трансмиссионное масло; Тип основы масла: синтетическое масло; SAE: 75W-80; Емкость, л: 1 ELF Tranself NFJ 75W-80 1л - Трансмиссионное масло Тип масла: Трансмиссионное масло ; Тип основы масла: синтетическое масло; SAE: 75W-80; Емкость, л: 1</p>
+
+						<div class="theproduct__controls">
+							<a href="#" class="theproduct__control theproduct__control--horizontal">
+								<svg style="transform:rotate(.5turn);"><use xlink:href="#share"></use></svg>Поделиться
+							</a>
+							<a href="#" class="theproduct__control theproduct__control--horizontal">
+								<svg><use xlink:href="#scales"></use></svg>Сравнить
+							</a>
+						</div>
+					</div>
+					<div class="theproduct__similar">
+						<h3 class="similar-product__title">Похожий товар</h3>
+						<span class="similar-product__show-all"><a href="#">Показать все похожие товары</a></span>
+
+						<div class="product-item__wrapper">
+							<div class="product-item__image">
+								<img src="images/product/magnatec_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+							</div>
+							<div class="product-item__infoline">
+								<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+								<div class="cfx"></div>
+							</div>
+							<h4 class="product-item__title">Трансмиссионное масло CASTRO Manual EP<br>80W-90&nbsp;1л</h4>
+							<h3 class="product-item__price">104 <span>грн</span></h3>
+						</div> <!-- /.product-item__wrapper -->
+
+					</div>
+					<div class="cfx"></div>
+				</section>
+
+				<div class="cfx"></div>
+			</article> <!-- /.theproduct -->
+
+			<section class="slider__wrapper similar-products">
+				<header>
+					<h3 class="slider__title">Похожие товары</h3>
+					<div class="slider__controls">
+						<a href="#" class="control control__prev" id="similarSliderPrev"><svg><use xlink:href="#arrow_left"></use></svg></a>
+						<a href="#" class="control control__next" id="similarSliderNext"><svg><use xlink:href="#arrow_right"></use></svg></a>
+					</div>
+					<div class="cfx"></div>
+				</header>
+				<div class="slider__body">
+					<ul id="similar_products">
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/castrol_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+									<span>Скидка -10%</span>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">104 <span>грн</span><small>125 грн</small></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/helix_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/mobil_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability last-items">Заканчивается</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">268 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/mobil_1_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">104 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/neste_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/neste_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+					</ul>
+				</div>
+			</section> <!-- /.slider__wrapper.similar-products -->
+
+			<section class="theproduct-info">
+				<div class="theproduct-info__tabs">
+					<ul>
+						<li><a href="#" class="active">Характеристики</a></li>
+						<li><a href="#">Описание</a></li>
+						<li><a href="#">Отзывыи вопросы <span class="counter">(40)</span></a></li>
+						<li><a href="#">Видеообзоры и статьи</a></li>
+						<li><a href="#">Сертификаты</a></li>
+					</ul>
+				</div>
+
+				<div class="theproduct-info__tab-body">
+					<div class="characteristics">
+						<h3 class="tab-body__title">Характеристики товара</h3>
+						<div class="table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td>Класс вязкости</td>
+										<td>5W-40</td>
+									</tr>
+									<tr>
+										<td>сСт при 40°С</td>
+										<td>84</td>
+									</tr>
+									<tr>
+										<td>сСт при 100°С</td>
+										<td>14</td>
+									</tr>
+									<tr>
+										<td>Зольность сульфатная, % мас., ASTM D 874:</td>
+										<td>1,1</td>
+									</tr>
+									<tr>
+										<td>Содержание фосфора:</td>
+										<td>0,0095</td>
+									</tr>
+									<tr>
+										<td>Температура вспышки, ºC, ASTM D 92:</td>
+										<td>222</td>
+									</tr>
+									<tr>
+										<td>Температура застывания, ºC, ASTM D 97:</td>
+										<td>-39</td>
+									</tr>
+								</tbody>
+							</table>
+							<span class="show-all">
+								<svg><use xlink:href="#arrow_down--red"></use></svg>
+								<a href="#">Показать все характеристики</a>
+							</span>
+						</div>
+					</div> <!-- /.characteristics -->
+
+					<div class="description">
+						<h3 class="tab-body__title">Описание товара</h3>
+						<p>Mobil Super 3000 X1 5W-40 представляет собой синтетическое моторное масло, обеспечивающее длительный срок службы двигателей в автомобилях различных типов и годов выпуска, а также повышенный уровень их защиты в широком диапазоне температур.</p>
+						<p>Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям.</p>
+						<span class="show-all">
+							<svg><use xlink:href="#arrow_down--red"></use></svg>
+							<a href="#">Подробнее</a>
+						</span>
+					</div> <!-- /.description -->
+
+					<div class="testimonials">
+						<div class="tab-body__tabs">
+							<a href="#" class="tab-body__tab active">Отзывы <span>(10)</span></a>
+							<a href="#" class="tab-body__tab">Вопросы <span>(7)</span></a>
+							<a href="#" class="tab-body__tab leave-testimonial">Оставить отзыв</a>
+							<div class="cfx"></div>
+						</div>
+						<div class="testimonial__wrapper">
+							<div class="testimonial__body">
+								<div class="testimonial__header">
+									<span class="author">Владимир</span>
+									<span class="date">04.07.2016</span>
+								</div>
+								<div class="testimonial__text">
+									<p>У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи.</p>
+									<p>До того ж, мені здається, що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше</p>
+								</div>
+								<div class="testimonial__pros"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="testimonial__cons"><span>Недостатки:</span> не обнаружены</div>
+								<div class="testimonial__footer">
+									<a href="#" class="answers">1 ответ</a>
+									<a href="#" class="leave-answer">Ответить</a>
+									<div class="leave-feedback">
+										<span>Был ли вам полезен этот отзыв:</span>
+										<a href="#" class="feedback-pos">
+											<svg><use xlink:href="#thumb_up"></use></svg>
+											14
+										</a>
+										<a href="#" class="feedback-neg">
+											<svg><use xlink:href="#thumb_down"></use></svg>
+											7
+										</a>
+									</div>
+									<div class="cfx"></div>
+								</div>
+							</div>
+							<div class="testimonial__rating">
+								<div class="title">Оценка</div>
+								<span class="statusline__rating">
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									<span><svg><use xlink:href="#star_contur"></use></svg></span>
+								</span>
+								<span class="rating">3,0</span>
+							</div>
+							<div class="cfx"></div>
+						</div> <!-- /.testimonial__wrapper -->
+						<div class="testimonial__wrapper">
+							<div class="testimonial__body">
+								<div class="testimonial__header">
+									<span class="author">Владимир</span>
+									<span class="date">04.07.2016</span>
+								</div>
+								<div class="testimonial__text">
+									У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається, що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше
+									<span class="show-all">
+										<svg><use xlink:href="#arrow_down--red"></use></svg>
+										<a href="#">Читать полностью</a>
+									</span>
+								</div>
+								<div class="testimonial__pros"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="testimonial__cons"><span>Недостатки:</span> не обнаружены</div>
+								<div class="testimonial__footer">
+									<a href="#" class="answers">1 ответ</a>
+									<a href="#" class="leave-answer">Ответить</a>
+									<div class="leave-feedback">
+										<span>Был ли полезен этот отзыв:</span>
+										<a href="#" class="feedback-pos">
+											<svg><use xlink:href="#thumb_up"></use></svg>
+											14
+										</a>
+										<a href="#" class="feedback-neg">
+											<svg><use xlink:href="#thumb_down"></use></svg>
+											7
+										</a>
+									</div>
+									<div class="cfx"></div>
+								</div>
+							</div>
+							<div class="testimonial__rating">
+								<div class="title">Оценка</div>
+								<span class="statusline__rating">
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									<span><svg><use xlink:href="#star_contur"></use></svg></span>
+								</span>
+								<span class="rating">3,0</span>
+							</div>
+							<div class="cfx"></div>
+						</div> <!-- /.testimonial__wrapper -->
+						<div class="testimonial__wrapper" style="padding-top:25px;">
+							<div class="testimonial__body">
+								<div class="testimonial__header">
+									<span class="author">Владимир</span>
+									<span class="date">04.07.2016</span>
+								</div>
+								<div class="testimonial__text">
+									У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається, що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше
+								</div>
+								<div class="testimonial__footer">
+									<a href="#" class="answers">1 ответ</a>
+									<a href="#" class="leave-answer">Ответить</a>
+									<div class="leave-feedback">
+										<span>Был ли полезен этот отзыв:</span>
+										<a href="#" class="feedback-pos">
+											<svg><use xlink:href="#thumb_up"></use></svg>
+											14
+										</a>
+										<a href="#" class="feedback-neg">
+											<svg><use xlink:href="#thumb_down"></use></svg>
+											7
+										</a>
+									</div>
+									<div class="cfx"></div>
+								</div>
+							</div>
+							<div class="testimonial__rating">
+								<div class="title">Оценка</div>
+								<span class="statusline__rating">
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_full"></use></svg></span>
+									<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									<span><svg><use xlink:href="#star_contur"></use></svg></span>
+								</span>
+								<span class="rating">3,0</span>
+							</div>
+							<div class="cfx"></div>
+						</div> <!-- /.testimonial__wrapper -->
+						<span class="show-all">
+							<svg><use xlink:href="#arrow_down--red"></use></svg>
+							<a href="#">Показать все отзывы</a>
+						</span>
+					</div> <!-- /.testimonials -->
+
+					<div class="videos">
+						<h3 class="tab-body__title">Видеообзоры <span>(2)</span></h3>
+						<div class="theproduct-info__video">
+							<img src="images/video_preview_02.png" alt="">
+							<span><svg><use xlink:href="#play"></use></svg></span>
+						</div>
+						<div class="theproduct-info__video">
+							<img src="images/video_preview_01.png" alt="">
+							<span><svg><use xlink:href="#play"></use></svg></span>
+						</div>
+						<div class="cfx"></div>
+					</div> <!-- /.videos -->
+
+					<div class="articles">
+						<h3 class="tab-body__title">Статьи <span>(2)</span></h3>
+						<ul id="articles">
+							<li>
+								<div class="theproduct-info__article">
+									<img class="article-image" src="images/article_01_image.png" alt="">
+									<div class="article-body">
+										<span class="article-date">16 августа 2016</span>
+										<a href="#" class="article-title">Подробный обзор и выявление недостатков навигатора DriveAssist 50LMT</a>
+										<p class="article-text">Современные технологии буквально с каждым днем все глубже и глубже загоняют в могилу некоторые автомобильные девайсы, взять к примеру GPS навигатор. Еще каких-то два-три ...</p>
+									</div>
+								</div> <!-- /.theproduct-info__article -->
+							</li>
+							<li>
+								<div class="theproduct-info__article">
+									<img class="article-image" src="images/article_02_image.png" alt="">
+									<div class="article-body">
+										<span class="article-date">16 августа 2016</span>
+										<a href="#" class="article-title">Подробный обзор и выявление недостатков навигатора DriveAssist 50LMT</a>
+										<p class="article-text">Современные технологии буквально с каждым днем все глубже и глубже загоняют в могилу некоторые автомобильные девайсы, взять к примеру GPS навигатор. Еще каких-то два-три ...</p>
+									</div>
+								</div> <!-- /.theproduct-info__article -->
+							</li>
+							<div class="cfx"></div>
+						</ul>
+						<div class="slider__controls slider__controls--vertical">
+							<a href="#" class="control control__next" id="articlesSliderNext"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_right"></use></svg></a>
+							<a href="#" class="control control__prev" id="articlesSliderPrev"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_left"></use></svg></a>
+						</div>
+						<div class="cfx"></div>
+					</div> <!-- /.articles -->
+
+					<div class="certificates">
+						<h3 class="tab-body__title">Сертификаты соответствия</h3>
+						<img src="images/certificates/certificate_01.png" alt="">
+						<img src="images/certificates/certificate_02.png" alt="">
+						<img src="images/certificates/certificate_03.png" alt="">
+						<img src="images/certificates/certificate_04.png" alt="">
+						<div class="cfx"></div>
+					</div> <!-- /.certificates -->
+
+				</div> <!-- /.theproduct-info__tab-body -->
+
+				<div class="theproduct-info__tab-sidebar">
+					<div class="theproduct-info__preview">
+						<div class="product-item__wrapper not-available">
+							<div class="product-item__image">
+								<img src="images/product/mobil_1_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+							</div>
+							<div class="product-item__infoline">
+								<span class="availability not-available">Нет в наличии</span>
+								<div class="cfx"></div>
+							</div>
+							<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+							<h3 class="product-item__price">104 <span>грн</span></h3>
+							<div class="product-item__controls">
+								<a href="#" class="button button--red-border">Сообщить<br>о поступлении</a>
+								<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+							</div>
+						</div> <!-- /.product-item__wrapper -->
+						<span class="show-all"><a href="#">Показать все похожие товары</a></span>
+					</div>
+					<div class="theproduct-info__fit-for-select">
+						<span class="availability"><svg><use xlink:href="#check"></use></svg> Товар подходит к вашему авто:</span>
+						<label for="fit-for-select" class="slider__select">
+							<select name="" id="fit-for-select">
+								<option value="">Volkswagen Golf, 1.9</option>
+								<option value="">Volkswagen Golf, 2.0</option>
+								<option value="">Ford Focus C-Max, 1.8</option>
+								<option value="">Dodge Charger, 4.2</option>
+								<option value="">Volkswagen Multivan, 2.5TDi</option>
+							</select>
+							<span class="svg-icon"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_down"></use></svg></span>
+						</label>
+					</div>
+				</div> <!-- /.theproduct-info__tab-sidebar -->
+				<div class="cfx"></div>
+			</section> <!-- /.theproduct__info -->
+
+			<section class="slider__wrapper also-buy">
+				<header>
+					<h3 class="slider__title slider__title--block">С этим товаром так же покупают:</h3>
+					<div class="slider__controls">
+						<a href="#" class="control control__prev" id="alsoBuySliderPrev"><svg><use xlink:href="#arrow_left"></use></svg></a>
+						<a href="#" class="control control__next" id="alsoBuySliderNext"><svg><use xlink:href="#arrow_right"></use></svg></a>
+					</div>
+					<div class="slider__tabs">
+						<a href="#" class="slider__tab">Омыватели</a>
+						<a href="#" class="slider__tab">Очистители</a>
+						<a href="#" class="slider__tab">Топливные фильтры</a>
+						<a href="#" class="slider__tab active">Моторное масло</a>
+						<a href="#" class="slider__tab">Инструменты для авто</a>
+						<div class="cfx"></div>
+					</div>
+					<div class="cfx"></div>
+				</header>
+				<div class="slider__body">
+					<ul id="also-buy">
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/castrol_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+									<span>Скидка -10%</span>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">104 <span>грн</span><small>125 грн</small></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/helix_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/mobil_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability last-items">Заканчивается</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">268 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/mobil_1_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">104 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/neste_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/mobil_1_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">104 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/neste_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+					</ul>
+				</div>
+			</section> <!-- /.slider__wrapper.also-buy -->
+
+			<section class="slider__wrapper also-choose-for">
+				<header>
+					<h3 class="slider__title">Покупатели выбирают для:</h3>
+					<label for="slider__select" class="slider__select">
+						<select name="" id="slider__select">
+							<option value="">Volkswagen Golf, 1.9</option>
+							<option value="">Volkswagen Golf, 2.0</option>
+							<option value="">Ford Focus C-Max, 1.8</option>
+							<option value="">Dodge Charger, 4.2</option>
+							<option value="">Volkswagen Multivan, 2.5TDi</option>
+						</select>
+						<span class="svg-icon"><svg><use xlink:href="#arrow_down"></use></svg></span>
+					</label>
+					<div class="slider__controls">
+						<a href="#" class="control control__prev" id="alsoChooseForSliderPrev"><svg><use xlink:href="#arrow_left"></use></svg></a>
+						<a href="#" class="control control__next" id="alsoChooseForSliderNext"><svg><use xlink:href="#arrow_right"></use></svg></a>
+					</div>
+					<div class="cfx"></div>
+				</header>
+				<div class="slider__body">
+					<ul id="also-choose-for">
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/xenon.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+									<span>Скидка -10%</span>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">104 <span>грн</span><small>125 грн</small></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/def.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/ista.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability last-items">Заканчивается</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">268 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/navigator.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">104 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/reil.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/ista.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability last-items">Заканчивается</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">268 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/navigator.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">104 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/reil.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<div class="product-item__infoline">
+									<span class="article">Код товара: 39207</span>
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+					</ul>
+				</div>
+			</section> <!-- /.slider__wrapper.also-choose-for -->
+
+			<section class="slider__wrapper watched-items">
+				<header>
+					<h3 class="slider__title">Вы просматривали</h3>
+					<span class="show-all">
+						<a href="#">Все просмотренные товары</a>
+						<svg><use xlink:href="#arrow_right--red"></use></svg>
+					</span>
+					<div class="cfx"></div>
+				</header>
+				<div class="slider__body">
+					<ul id="watched-items">
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/denso.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+									<span>Скидка -10%</span>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec<br>10W-40 A3/B4 4 л</h4>
+								<div class="product-item__infoline">
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h3 class="product-item__price">104 <span>грн</span><small>125 грн</small></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/break.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec<br>10W-40 A3/B4 4 л</h4>
+								<div class="product-item__infoline">
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/castrol_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec<br>10W-40 A3/B4 4 л</h4>
+								<div class="product-item__infoline">
+									<span class="availability last-items">Заканчивается</span>
+									<div class="cfx"></div>
+								</div>
+								<h3 class="product-item__price">268 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/stern.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec<br>10W-40 A3/B4 4 л</h4>
+								<div class="product-item__infoline">
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h3 class="product-item__price">104 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/disk.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec<br>10W-40 A3/B4 4 л</h4>
+								<div class="product-item__infoline">
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/castrol_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec<br>10W-40 A3/B4 4 л</h4>
+								<div class="product-item__infoline">
+									<span class="availability last-items">Заканчивается</span>
+									<div class="cfx"></div>
+								</div>
+								<h3 class="product-item__price">268 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/stern.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec<br>10W-40 A3/B4 4 л</h4>
+								<div class="product-item__infoline">
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h3 class="product-item__price">104 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+						<li>
+							<div class="product-item__wrapper">
+								<div class="product-item__image">
+									<img src="images/product/disk.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+								</div>
+								<h4 class="product-item__title">Моторное масло Castrol Magnatec<br>10W-40 A3/B4 4 л</h4>
+								<div class="product-item__infoline">
+									<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+									<div class="cfx"></div>
+								</div>
+								<h3 class="product-item__price">456 <span>грн</span></h3>
+								<div class="product-item__controls">
+									<a href="#" class="button button--red-solid">Купить</a>
+									<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+								</div>
+								<div class="product-item__statusline">
+									<span class="statusline__rating">
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_full"></use></svg></span>
+										<span><svg><use xlink:href="#star_contur"></use></svg></span>
+									</span>
+									<span class="statusline__testimonials">
+										<svg><use xlink:href="#comment"></use></svg>
+										<a href="#">3 отзыва</a>
+									</span>
+								</div>
+							</div> <!-- /.product-item__wrapper -->
+						</li>
+					</ul>
+					<div class="slider__controls slider__controls--vertical">
+						<a href="#" class="control control__next" id="watchedItemsSliderNext"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_right"></use></svg></a>
+						<a href="#" class="control control__prev" id="watchedItemsSliderPrev"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_left"></use></svg></a>
+					</div>
+				</div>
+			</section> <!-- /.slider__wrapper.watched-items -->
+
+			<div class="product-item__wrapper" style="display:none;">
+				<div class="product-item__image">
+					<img src="images/product/castrol_bottle.png" alt="Моторное масло MOBIL Super 3000 X1 5W-40, 4л"h>
+					<span>Скидка -10%</span>
+				</div>
+				<div class="product-item__infoline">
+					<span class="article">Код товара: 39207</span>
+					<span class="availability is-available"><svg><use xlink:href="#check"></use></svg> В наличии</span>
+					<div class="cfx"></div>
+				</div>
+				<h4 class="product-item__title">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</h4>
+				<h3 class="product-item__price">104 <span>грн</span><small>125 грн</small></h3>
+				<div class="product-item__controls">
+					<a href="#" class="button button--red-solid">Купить</a>
+					<a href="#" class="compare"><svg><use xlink:href="#scales"></use></svg></a>
+				</div>
+				<div class="product-item__statusline">
+					<span class="statusline__rating">
+						<span><svg><use xlink:href="#star_full"></use></svg></span>
+						<span><svg><use xlink:href="#star_full"></use></svg></span>
+						<span><svg><use xlink:href="#star_full"></use></svg></span>
+						<span><svg><use xlink:href="#star_full"></use></svg></span>
+						<span><svg><use xlink:href="#star_contur"></use></svg></span>
+					</span>
+					<span class="statusline__testimonials">
+						<svg><use xlink:href="#comment"></use></svg>
+						<a href="#">3 отзыва</a>
+					</span>
+				</div>
+			</div> <!-- /.product-item__wrapper -->
+
+		</main role="main"> <!-- /.main-content -->
+
+		<footer class="main-footer">
+			<section class="main-footer__inner">
+				<div class="main-footer__nav">
+					<div class="main-footer__col">
+						<h4 class="main-footer__col-title">Каталог</h4>
+						<ul>
+							<li><a href="#">Электроника</a></li>
+							<li><a href="#">Звук и видео</a></li>
+							<li><a href="#">Запчасти и расходники</a></li>
+							<li><a href="#">Свет (освещение)</a></li>
+							<li><a href="#">Интерьер</a></li>
+							<li><a href="#">Экстерьер</a></li>
+							<li><a href="#">Колеса</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Багаж и крепление</a></li>
+							<li><a href="#">Автохимия</a></li>
+							<li><a href="#">Техпомощь</a></li>
+							<li><a href="#">Инструмент</a></li>
+							<li><a href="#">Туризм</a></li>
+							<li><a href="#">4х4 джипинг</a></li>
+							<li><a href="#">Мото</a></li>
+						</ul>
+					</div>
+					<div class="main-footer__col">
+						<h4 class="main-footer__col-title">Компания</h4>
+						<ul>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Магазины</a></li>
+							<li><a href="#">Партнеры</a></li>
+							<li><a href="#">Оптовым покупателям</a></li>
+						</ul>
+					</div>
+					<div class="main-footer__col">
+						<h4 class="main-footer__col-title">Покупателям</h4>
+						<ul>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="#">Гарантия</a></li>
+							<li><a href="#">Кредит</a></li>
+							<li><a href="#">Бонусная программа</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Карта сайта</a></li>
+						</ul>
+					</div>
+					<div class="main-footer__col">
+						<h4 class="main-footer__col-title">Информация</h4>
+						<ul>
+							<li><a href="#">Как выбрать</a></li>
+							<li><a href="#">Сравнительные тесты</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Часто задаваемые вопросы</a></li>
+						</ul>
+					</div>
+					<div class="main-footer__copyright">
+						<div class="main-footer__copyright--left">&copy; 2016, База автозвука</div>
+						<div class="main-footer__copyright--right">Разработано в <strong><a href="#">ТурумБурум</a></strong></div>
+						<div class="cfx"></div>
+					</div>
+				</div>
+				<div class="main-footer__contacts">
+					<h3 class="main-footer__main-phone">
+						0 800 30-15-85
+						<small>Бесплатно со стационарных и мобильных телефонов Украины</small>
+					</h3>
+					<div class="main-footer__socials">
+						<span class="main-footer__socials-title">Следите за нами в соцсетях:</span>
+						<a href="#" class="icon-facebook"><svg><use xlink:href="#facebook"></use></svg></a>
+						<a href="#" class="icon-google-plus"><svg><use xlink:href="#google-plus"></use></svg></a>
+						<a href="#" class="icon-twitter"><svg><use xlink:href="#twitter"></use></svg></a>
+						<a href="#" class="icon-youtube"><svg><use xlink:href="#youtube"></use></svg></a>
+						<a href="#" class="icon-vkontakte"><svg><use xlink:href="#vkontakte"></use></svg></a>
+						<a href="#" class="icon-instagram"><svg><use xlink:href="#instagram"></use></svg></a>
+					</div>
+				</div>
+			</section>
+		</footer>
+	</div>
+
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/lightslider.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var sliderParams = {
+	      item: 5,
+	      slideMove: 1,
+	      controls: false,
+	      pager: false,
+	      enableTouch: false,
+	      enableDrag: false,
+	      freeMove: false,
+	      slideMargin: 30,
+	      autoWidth: true,
+	    };
+
+	    var similarSlider = $("#similar_products").lightSlider(sliderParams);
+	    var similarSliderPrev = $('#similarSliderPrev');
+	    var similarSliderNext = $('#similarSliderNext');
+	    similarSliderNext.on('click', function(e) {
+	    	e.preventDefault();
+	    	similarSlider.goToNextSlide();
+	    });
+	    similarSliderPrev.on('click', function(e) {
+	    	e.preventDefault();
+	    	similarSlider.goToPrevSlide();
+	    });
+
+	    var articlesSlider = $("#articles").lightSlider(sliderParams);
+	    var articlesSliderPrev = $('#articlesSliderPrev');
+	    var articlesSliderNext = $('#articlesSliderNext');
+	    articlesSliderNext.on('click', function(e) {
+	    	e.preventDefault();
+	    	articlesSlider.goToNextSlide();
+	    });
+	    articlesSliderPrev.on('click', function(e) {
+	    	e.preventDefault();
+	    	articlesSlider.goToPrevSlide();
+	    });
+
+	    var alsoBuySlider = $("#also-buy").lightSlider(sliderParams);
+	    var alsoBuySliderPrev = $('#alsoBuySliderPrev');
+	    var alsoBuySliderNext = $('#alsoBuySliderNext');
+	    alsoBuySliderNext.on('click', function(e) {
+	    	e.preventDefault();
+	    	alsoBuySlider.goToNextSlide();
+	    });
+	    alsoBuySliderPrev.on('click', function(e) {
+	    	e.preventDefault();
+	    	alsoBuySlider.goToPrevSlide();
+	    });
+
+	    var alsoChooseForSlider = $("#also-choose-for").lightSlider(sliderParams);
+	    var alsoChooseForSliderPrev = $('#alsoChooseForSliderPrev');
+	    var alsoChooseForSliderNext = $('#alsoChooseForSliderNext');
+	    alsoChooseForSliderNext.on('click', function(e) {
+	    	e.preventDefault();
+	    	alsoChooseForSlider.goToNextSlide();
+	    });
+	    alsoChooseForSliderPrev.on('click', function(e) {
+	    	e.preventDefault();
+	    	alsoChooseForSlider.goToPrevSlide();
+	    });
+
+	    var watchedItemsSlider = $("#watched-items").lightSlider({
+	      item: 5,
+	      slideMove: 1,
+	      controls: false,
+	      pager: false,
+	      enableTouch: false,
+	      enableDrag: false,
+	      freeMove: false,
+	      slideMargin: 0,
+	      autoWidth: true,
+	    });
+	    var watchedItemsSliderPrev = $('#watchedItemsSliderPrev');
+	    var watchedItemsSliderNext = $('#watchedItemsSliderNext');
+	    watchedItemsSliderNext.on('click', function(e) {
+	    	e.preventDefault();
+	    	watchedItemsSlider.goToNextSlide();
+	    });
+	    watchedItemsSliderPrev.on('click', function(e) {
+	    	e.preventDefault();
+	    	watchedItemsSlider.goToPrevSlide();
+	    });
+		});
+	</script>
+</body>
+</html>

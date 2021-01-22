@@ -1,0 +1,21 @@
+@mixin valign {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+@mixin halign {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.cfx {
+	@extend %clearfix;
+}
